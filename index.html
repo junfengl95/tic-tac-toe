@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic-Tac-Toe</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>Tic-Tac-Toe</header>
+    
     <div class="gameboard">
         <button class="empty-cell"></button>
         <button class="empty-cell"></button>
@@ -22,27 +24,41 @@
     <div class="scoreboard">
 
     </div>
-    <dialog id="game-input">
-        <header>
-            <h2>Welcome Players</h2>
-        </header>
-        <form method="dialog", class="game-form">
-            <div class="form-row">
-                <label for="playerOneName">Player 1 Name:</label>
-                <input type="text" id="playerOneName" name="playerOneName">
-                <label for="playerOneSymbol">Player 1 Symbol:</label>
-                <input type="text" id="playerOneSymbol" name="playerOneSymbol">
-            </div>
-            <div class="form-row">
-                <label for="playerTwoName">Player 2 Name:</label>
-                <input type="text" id="playerTwoName" name="playerTwoName">
-                <label for="playerTwoSymbol">Player 2 Symbol:</label>
-                <input type="text" id="playerTwoSymbol" name="playerTwoSymbol">
-            </div>
-            
-        </form>
-    </dialog>
+
+    <div id="overlay">
+        <h1>Tic-Tac-Toe</h1>
+        <div id="form-container">
+            <form id="form">
+                <li>
+                    <label for="player-1-name">Player 1 Name</label>
+                    <input type="text" id="player-1-name" name="player-1-name"
+                    placeholder="Name" required>
+                </li>
+                <li>
+                    <label for="player-1-symbol">Player 1 Symbol</label>
+                    <input type="text" id="player-1-symbol" name="player-1-symbol"
+                    placeholder="X" required>
+                </li>
+                <li>
+                    <label for="player-2-name">Player 2 Name</label>
+                    <input type="text" id="player-2-name" name="player-2-name"
+                    placeholder="Name" required>
+                </li>
+                <li>
+                    <label for="player-2-symbol">Player 2 Symbol</label>
+                    <input type="text" id="player-2-symbol" name="player-2-symbol"
+                    placeholder="O" required>
+                </li>
+                <button type="submit" id="submit-button">Start Game</button>
+            </form>
+        </div>
+    </div>
+
+
+    
+    
 
     <!-- <script src="game.js"></script> -->
 </body>
+
 </html>

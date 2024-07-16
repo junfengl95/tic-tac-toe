@@ -1,12 +1,46 @@
 * {
     padding: 0;
     margin: 0;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
+:root {
+    --board-border-color:white;
+    --overlay-background-color: black;
+    --background-color: black;
+    --button-color: black;
+}
+
+body, html {
+    background-color: var(--background-color);
+}
 
 header {
     padding: 1em;
     text-align: center;
+    font-size: 2em
+}
+
+button {
+    background-color: var(--button-color);
+    border: 1px solid white;
+    box-shadow: 0 0 15px white;
+    margin-top: 20px;
+    position:relative;
+    padding: 8px 10px;
+    opacity: 0.9;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: 0 0 20px white;
+    opacity: 1;
+}
+
+.form input {
+    color: black;
 }
 
 .gameboard {
@@ -29,3 +63,63 @@ header {
     align-items: center;
     justify-content: center;
 }
+
+#overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1000;
+}
+
+#overlay h1 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    margin-top: 80px;
+    font-size: 40px;
+    text-shadow: 0 0 20px white;
+}
+
+#form-container {
+    display: flex;
+    position: fixed;
+    z-index: 1001;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--overlay-background-color)
+}
+
+#form {
+    background-color: var(--background-color);
+    display:flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    width: 250px;
+}
+
+#form li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+#form label {
+    text-shadow: 0 0 5px white;
+    font-size: 20px
+}
+
+#form input {
+    outline: white solid 1px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-top: 3px;
+    color: black
+}
+
