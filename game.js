@@ -1,44 +1,49 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    function createPlayer(sign, name, id){
+    const Gameboard = (function () {
+        let board = ["", "", "", "", "", "", "", "", ""];
+
+        const getBoard = () => board;
+        const updateBoard = (index, marker) => {
+            if (board[index] === "") {
+                board[index] = marker;
+                return true;
+            }
+            return false;
+        };
+
+        const resetBoard = () => {
+            board = ["", "", "", "", "", "", "", "", ""];
+        }
+
+        return { getBoard, updateBoard, resetBoard };
+    })();
+
+    function createPlayer(symbol, name) {
         let score = 0;
 
         // method to update score
         const updateScore = () => {
             score++;
         }
-
         const getScore = () => score; // Implicit return
 
-        const getSign = () => sign;
+        const getSign = () => symbol;
 
         const getName = () => name;
 
-        const getId = () => id;
-
-        return {getSign, getName, getId, updateScore, getScore}
+        return { getSign, getName, updateScore, getScore }
     }
 
-    const Gameboard = {
-        board: ["", "", "", "", "", "", "", "", ""],
-        resetBoard() {
-            this.board = ["", "", "", "", "", "", "", "", ""];
-        },
-    };
+    const GameController = (function () {
 
+    })();
 
-    // Dialog and form handling
-    const dialog = document.getElementById('game-dialog');
-    const form = document.getElementById('game-form')
+    function game() {
+        currentPlayer = null;
+        isGameOver: false;
 
-    const buttons = document.querySelectorAll(".empty-cell");
-
-    const updateDisplay = () => {
-        buttons.forEach((button, index) => {
-            button.textContent = Gameboard.board[index];
-        });
-    };
-
+    }
 
     // Overlay 
     const closeOverlay = () => {
@@ -49,12 +54,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('overlay').style.diplay = 'block';
     }
 
-    const submitBtn = document.getElementById("submit-button");
+    const startButton = document.getElementById("start-game");
+    const newGameBtn = document.getElementById("new-game");
 
-    submitBtn.onclick = function(event){
+    startButton.onclick = function (event) {
         event.preventDefault();
-
+        console.log("submit button clicked")
         closeOverlay();
+
+        const playerOneName = document.getElementById("player-1-name").value;
+        const playerOneSymbol = document.getElementById("player-1-symbol").value;
+        const playerTwoName = document.getElementById("player-2-name").value;
+        const playerTwoSymbol = document.getElementById("player-2-symbol").value;
+
+        playerOne = createPlayer(playerOneSymbol, playerOneName, 1);
+        playerTwo = createPlayer(playerTwoSymbol, playerTwoName, 2);
     }
+
+    newGameBtn.onclick = function (event) {
+        console.log("new Game button clicked");
+        openOverlay();
+    }
+
 
 })

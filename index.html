@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    
     <div class="gameboard">
         <button class="empty-cell"></button>
         <button class="empty-cell"></button>
@@ -24,6 +23,10 @@
     <div class="scoreboard">
 
     </div>
+    <div class="game-buttons">
+        <button type="button" id="new-game">New Game</button>
+        <button type="button" id="new-round">New Round</button>
+    </div>
 
     <div id="overlay">
         <h1>Tic-Tac-Toe</h1>
@@ -31,34 +34,25 @@
             <form id="form">
                 <li>
                     <label for="player-1-name">Player 1 Name</label>
-                    <input type="text" id="player-1-name" name="player-1-name"
-                    placeholder="Name" required>
+                    <input type="text" id="player-1-name" name="player-1-name" placeholder="Name" required>
                 </li>
                 <li>
                     <label for="player-1-symbol">Player 1 Symbol</label>
-                    <input type="text" id="player-1-symbol" name="player-1-symbol"
-                    placeholder="X" required>
+                    <input type="text" id="player-1-symbol" name="player-1-symbol" placeholder="X" required>
                 </li>
                 <li>
                     <label for="player-2-name">Player 2 Name</label>
-                    <input type="text" id="player-2-name" name="player-2-name"
-                    placeholder="Name" required>
+                    <input type="text" id="player-2-name" name="player-2-name" placeholder="Name" required>
                 </li>
                 <li>
                     <label for="player-2-symbol">Player 2 Symbol</label>
-                    <input type="text" id="player-2-symbol" name="player-2-symbol"
-                    placeholder="O" required>
+                    <input type="text" id="player-2-symbol" name="player-2-symbol" placeholder="O" required>
                 </li>
-                <button type="submit" id="submit-button">Start Game</button>
+                <button type="submit" id="start-game">Start Game</button>
             </form>
         </div>
     </div>
-
-
-    
-    
-
-    <!-- <script src="game.js"></script> -->
+    <script src="game.js"></script>
 </body>
 
 </html>
