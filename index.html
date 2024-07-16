@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <div class="gameboard">
+    <div id="message"></div>
+    <div id="gameboard">
         <button class="empty-cell"></button>
         <button class="empty-cell"></button>
         <button class="empty-cell"></button>
@@ -37,16 +38,16 @@
                     <input type="text" id="player-1-name" name="player-1-name" placeholder="Name" required>
                 </li>
                 <li>
-                    <label for="player-1-symbol">Player 1 Symbol</label>
-                    <input type="text" id="player-1-symbol" name="player-1-symbol" placeholder="X" required>
+                    <label for="player-1-marker">Player 1 Marker</label>
+                    <input type="text" id="player-1-marker" name="player-1-marker" placeholder="X" required>
                 </li>
                 <li>
                     <label for="player-2-name">Player 2 Name</label>
                     <input type="text" id="player-2-name" name="player-2-name" placeholder="Name" required>
                 </li>
                 <li>
-                    <label for="player-2-symbol">Player 2 Symbol</label>
-                    <input type="text" id="player-2-symbol" name="player-2-symbol" placeholder="O" required>
+                    <label for="player-2-marker">Player 2 Marker</label>
+                    <input type="text" id="player-2-marker" name="player-2-marker" placeholder="O" required>
                 </li>
                 <button type="submit" id="start-game">Start Game</button>
             </form>
