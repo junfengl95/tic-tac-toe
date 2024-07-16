@@ -18,9 +18,31 @@
         <button class="empty-cell"></button>
         <button class="empty-cell"></button>
         <button class="empty-cell"></button>
+    </div>
+    <div class="scoreboard">
 
     </div>
+    <dialog id="game-input">
+        <header>
+            <h2>Welcome Players</h2>
+        </header>
+        <form method="dialog", class="game-form">
+            <div class="form-row">
+                <label for="playerOneName">Player 1 Name:</label>
+                <input type="text" id="playerOneName" name="playerOneName">
+                <label for="playerOneSymbol">Player 1 Symbol:</label>
+                <input type="text" id="playerOneSymbol" name="playerOneSymbol">
+            </div>
+            <div class="form-row">
+                <label for="playerTwoName">Player 2 Name:</label>
+                <input type="text" id="playerTwoName" name="playerTwoName">
+                <label for="playerTwoSymbol">Player 2 Symbol:</label>
+                <input type="text" id="playerTwoSymbol" name="playerTwoSymbol">
+            </div>
+            
+        </form>
+    </dialog>
 
-    <!-- <script src="game-console.js"></script> -->
+    <!-- <script src="game.js"></script> -->
 </body>
 </html>
