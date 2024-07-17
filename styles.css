@@ -14,6 +14,7 @@
 
 body, html {
     background-color: var(--background-color);
+    height:100%
 }
 
 header {
@@ -40,12 +41,30 @@ button:hover {
     opacity: 1;
 }
 
+.marker-x {
+    color: greenyellow;
+    text-shadow: 0 0 20px white
+}
+
+.marker-o {
+    color: palevioletred;
+    text-shadow: 0 0 20px white
+}
+
 .form input {
     color: black;
 }
 
+.scoreboard {
+    display: flex;
+    margin: 2em;
+    color: white;
+    font-size: 3em;
+    justify-content: space-between;
+}
+
 #message {
-    margin-top: 1em;
+    margin-top: 0.5em;
     text-align: center;
     font-size: 3em
 }
@@ -136,7 +155,8 @@ button:hover {
     align-content: center;
 }
 
-#new-game {
+#new-game,
+#new-round {
     font-size:xx-large;
     padding: 0.5em;
     margin: 1em;
