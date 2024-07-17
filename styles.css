@@ -32,6 +32,7 @@ button {
     opacity: 0.9;
     border-radius: 5px;
     cursor: pointer;
+    font-size: xx-large;
 }
 
 button:hover {
@@ -44,11 +45,12 @@ button:hover {
 }
 
 #message {
+    margin-top: 1em;
     text-align: center;
-    font-size: 2em
+    font-size: 3em
 }
 
-.gameboard {
+#gameboard {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -126,5 +128,17 @@ button:hover {
     padding: 5px 10px;
     margin-top: 3px;
     color: black
+}
+
+.game-buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#new-game {
+    font-size:xx-large;
+    padding: 0.5em;
+    margin: 1em;
 }
 
