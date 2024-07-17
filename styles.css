@@ -14,13 +14,8 @@
 
 body, html {
     background-color: var(--background-color);
-    height:100%
-}
-
-header {
-    padding: 1em;
-    text-align: center;
-    font-size: 2em
+    height:100%;
+    font-size: 16px;
 }
 
 button {
@@ -33,7 +28,7 @@ button {
     opacity: 0.9;
     border-radius: 5px;
     cursor: pointer;
-    font-size: xx-large;
+    font-size: 1.5rem;
 }
 
 button:hover {
@@ -57,25 +52,28 @@ button:hover {
 
 .scoreboard {
     display: flex;
-    margin: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    padding-left: 2em;
+    padding-right: 2em;
     color: white;
     font-size: 3em;
     justify-content: space-between;
 }
 
 #message {
-    margin-top: 0.5em;
+    margin-top: 0.3em;
     text-align: center;
-    font-size: 3em
+    font-size: 2em
 }
 
 #gameboard {
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    padding: 2rem;
-    width: 80vw;
-    height: 80vh;
+    padding: 1rem;
+    width: 60vw;
+    height: 60vh;
     max-width: 500px;
     max-height: 500px;
     margin: 0 auto; /* Center the grid horizontally*/
@@ -106,7 +104,7 @@ button:hover {
     justify-content: center;
     padding: 30px;
     margin-top: 80px;
-    font-size: 40px;
+    font-size: 3rem;
     text-shadow: 0 0 20px white;
 }
 
@@ -137,7 +135,7 @@ button:hover {
 
 #form label {
     text-shadow: 0 0 5px white;
-    font-size: 20px
+    font-size: 1.25rem
 }
 
 #form input {
@@ -150,6 +148,7 @@ button:hover {
 }
 
 .game-buttons {
+    margin-top: 1em;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -157,7 +156,7 @@ button:hover {
 
 #new-game,
 #new-round {
-    font-size:xx-large;
+    font-size:1.5rem;
     padding: 0.5em;
     margin: 1em;
 }
